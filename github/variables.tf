@@ -14,3 +14,8 @@ variable "template_repo" {
   description = "The template repo to use"
   default = "mlops-template"
 }
+
+variable "GITHUB_TOKEN" {
+  type = string
+  sensitive = true
+}

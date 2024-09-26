@@ -3,14 +3,14 @@ resource "github_repository" "this" {
   name        = each.value.repo_name
   description = each.value.repo_description
 
-  visibility = "internal"
+  visibility = "public"
 
   #Automatically delete head branches 
   delete_branch_on_merge = true
 
   template {
     owner                = var.github_org
-    repository           = each.value.template_repo
+    repository           = var.template_repo
     include_all_branches = false
   }
 }

@@ -6,3 +6,9 @@ terraform {
     }
   }
 }
+
+# Configure the GitHub Provider
+provider "github" {
+  owner = var.github_org
+  token = var.GITHUB_TOKEN
+}
